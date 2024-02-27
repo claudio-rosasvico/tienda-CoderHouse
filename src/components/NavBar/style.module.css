@@ -1,4 +1,9 @@
 .container {
     background-color: black;
+    
+}
+
+.titulo {
     color: aqua;
+    text-decoration: none;
 }

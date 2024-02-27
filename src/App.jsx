@@ -1,20 +1,19 @@
-import styles from './app.module.css'
-import NavBar from './components/NavBar/NavBar';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { ItemDetailContainer, ItemListContainer, NavBar } from "./components/index";
 
 const App = () => {
 
   return (
-    <>
+    <BrowserRouter>
     <NavBar/>
-    <ItemListContainer greeting={'Bienvenido'}/>
-    </>
+      <Routes>
+        <Route path="/" element={<ItemListContainer />} />
+        <Route path="/category/:category" element={<ItemListContainer />} />
+        <Route path="/product/:id" element={<ItemDetailContainer />} />
+        <Route path="*" element={<h1 className="text-center mt-4">Error 404</h1>} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
 export default App;
-
-
-/* <h1 className={styles.title}> Hola Mundo </h1>
-    <h2 className={`fs-4 ${styles.title}`} >Hola</h2>  Uso bootstrap y module.css combinados 
-    <p className='text-secundary fs-4'>Hola {nombre}</p>  Utilizo clases de bootstrap  */
