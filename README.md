@@ -1,8 +1,29 @@
-# React + Vite
+# TIENDA CoderHouse
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+###### Esta tienda está diseñada en el marco del curso de React Js Flex, comisión #60720. La temática seleccionada es una tienda de productos electrónicos.
 
-Currently, two official plugins are available:
+## Funciones
+- Listado de Productos;
+- Clasificación por categorías;
+- Detalles del Producto;
+- Navegación respetando el modelo Single Page App (sin recargar); 
+- Carrito de compra;
+- Proceso de pago con Tarjeta de Crédito.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Utilización de React
+- useContext
+- useState
+- useEffect
+- useParams
+
+## Tecnologías utilizadas
+- vite;
+- react-router-dom;
+- react-icons;
+- firebase;
+- sweetalert2;
+- react-credit-cards;
+
+## Responsables del Curso
+- Profesor: [Luis Alejandro Mera](https://www.linkedin.com/in/luis-mera-developer/ "Luis Alejandro Mera");
+- Tutor: [Federico Currao](https://www.linkedin.com/in/federicocurrao/ "Federico Currao")

@@ -1,0 +1,13 @@
+.fondo {
+    background-color: rgb(219, 218, 218);
+}
+
+form {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.pagar {
+    margin: 0 auto;
+    text-align: center;
+}
