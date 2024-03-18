@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import style from "./style.module.css";
 import Camion from "../../assets/img/camion.gif"
+import Cajas from "../../assets/img/llevando_cajas.gif"
 import Cards from "react-credit-cards";
 import "react-credit-cards/es/styles-compiled.css";
 import { CartContext } from "../../context/CartContext";
@@ -19,6 +20,7 @@ export const Checkout = () => {
     phone: 0,
   });
   const [orderId, setOrderId] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   const handleFocus = (e) => {
     setState({
@@ -37,6 +39,7 @@ export const Checkout = () => {
 
   const submitPayment = async (e) => {
     e.preventDefault();
+    setLoading(true);
     const newOrder = {
       buyer: state,
       items: cart,
@@ -72,10 +75,19 @@ export const Checkout = () => {
           <div className="row justify-content-center">
             <div className="col  text-center">
               <h2>¡FELICITACIONES TU COMPRA ESTA EN CAMINO!!</h2>
-              <p>El códiog de compra es #{orderId}</p>
+              <p>El código de compra es #{orderId}</p>
             </div>
           </div>
 
+        </div>
+      ) : ( loading ? (
+        <div className="text-center">
+          <h1 className="mt-4 mb-4">Procesando compra...</h1>
+          <div className="row justify-content-center">
+            <div className="col text-center">
+              <img src={Cajas} alt="" width="300px" />
+            </div>
+          </div>
         </div>
       ) : (
         <div className="card">
@@ -170,6 +182,7 @@ export const Checkout = () => {
             </form>
           </div>
         </div>
+      )
       )}
     </>
   );
